@@ -42,9 +42,9 @@ services:
         env_file:
             - ".env"
         environment:
-            - MYSQL_DATABASE=mysql
+            - MYSQL_DATABASE=cuo
             - MYSQL_ROOT_PASSWORD=P@ssw0rd
-            - MYSQL_USER=mysql_user
+            - MYSQL_USER=wordpress
             - MYSQL_PASSWORD=P@ssw0rd
         ports:
             - "8989:3306"
