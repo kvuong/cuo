@@ -31,21 +31,21 @@ services:
             - "8080:80"
         environment:
             - PMA_ARBITRARY=1
-            - PMA_HOST=mysql
+            - PMA_HOST=${MYSQL_HOST} #Refer to ./.env file for default values.
         restart: always
         depends_on:
             - mysqldb
     mysqldb:
         image: mysql
-        container_name: mysql
+        container_name: ${MYSQL_HOST} #Refer to ./.env file for default values.
         restart: always
         env_file:
             - ".env"
         environment:
-            - MYSQL_DATABASE=cuo
-            - MYSQL_ROOT_PASSWORD=P@ssw0rd
-            - MYSQL_USER=wordpress
-            - MYSQL_PASSWORD=P@ssw0rd
+            - MYSQL_DATABASE=${MYSQL_DATABASE}            #Refer to ./.env file for default values.
+            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}  #Refer to ./.env file for default values.
+            - MYSQL_USER=${MYSQL_USER}                    #Refer to ./.env file for default values.
+            - MYSQL_PASSWORD=${MYSQL_PASSWORD}            #Refer to ./.env file for default values.
         ports:
             - "8989:3306"
         volumes:
