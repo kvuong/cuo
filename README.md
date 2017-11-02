@@ -62,6 +62,15 @@ On Ubuntu and Debian these are available in the meta-package build-essential. On
 sudo apt install build-essential
 ```
 
+## Update host file
+
+In order for the LinkedIn login plugin to work, the white listed domain 'cuo.biz' must resolve to localhost. This requires 
+the host file to include the following entry:
+
+```sh
+127.0.0.1       cuo.biz
+```
+
 ### Images to use
 
 * [Nginx](https://hub.docker.com/_/nginx/)
