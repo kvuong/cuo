@@ -95,51 +95,21 @@ This project use the following ports :
 
 ## Clone the project
 
-To install [Git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git), download it and install following the instructions : 
+To install [Git](https://github.com/kvuong/cuo.git), download it and install following the instructions : 
 
 ```sh
-git clone https://github.com/nanoninja/docker-nginx-php-mysql.git
+git clone https://github.com/kvuong/cuo.git
 ```
 
 Go to the project directory : 
 
 ```sh
-cd docker-nginx-php-mysql
-```
-
-### Project tree
-
-```sh
-.
-├── Makefile
-├── README.md
-├── data
-│   └── db
-│       ├── dumps
-│       └── mysql
-├── docker-compose.yml
-├── etc
-│   ├── nginx
-│   │   └── default.conf
-│   ├── php
-│   │   └── php.ini
-│   └── ssl
-└── web
-    ├── app
-    │   ├── composer.json.dist
-    │   ├── phpunit.xml.dist
-    │   ├── src
-    │   │   └── Foo.php
-    │   └── test
-    │       ├── FooTest.php
-    │       └── bootstrap.php
-    └── public
-        └── index.php
+cd cuo
 ```
 
 ---
 
-## Configure Nginx With SSL Certificates
+## Configure Nginx With SSL Certificates (optional)
 
 1. Generate SSL certificates
 
@@ -204,7 +174,7 @@ If you use another IDE than PHPStorm or Netbeans, go to the [remote debugging](h
 
 3. Open your favorite browser :
 
-    * [http://localhost:8000](http://localhost:8000/)
+    * [http://cuo.biz:8000](http://cuobiz:8000/) WordPress - username: admin, password: kDQS5MWQ)MPccaLectv7lA2n
     * [https://localhost:3000](https://localhost:3000/) ([HTTPS](#configure-nginx-with-ssl-certificates) not configured by default)
     * [http://localhost:8080](http://localhost:8080/) PHPMyAdmin (username: dev, password: dev)
 
@@ -338,9 +308,3 @@ source .env && sudo docker exec -i $(sudo docker-compose ps -q mysqldb) mysql -u
 ```
 
 ---
-
-## Help us !
-
-Any thought, feedback or (hopefully not!)
-
-Developed by [@letvinz](https://twitter.com/letvinz)
